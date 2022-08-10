@@ -9,16 +9,8 @@ export class CPF {
             return false;
         }
 
-        switch(this.cpf){
-            case '11111111111': return false; break;
-            case '22222222222': return false; break;
-            case '33333333333': return false; break;
-            case '44444444444': return false; break;
-            case '55555555555': return false; break;
-            case '66666666666': return false; break;
-            case '77777777777': return false; break;
-            case '88888888888': return false; break;
-            case '99999999999': return false; break;
+        switch(this.cpf[0].repeat(this.cpf.length) === this.cpf){
+            case true: return false; break;
             default: {
                 let validate = this.cpf.slice(0, -2);
                 validate = this.calc(validate);
