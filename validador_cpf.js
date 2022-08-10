@@ -5,11 +5,7 @@ export class CPF {
         }
 
     validar() {
-        if (this.cpf.length !== 11){
-            return false;
-        }
-
-        switch(this.cpf[0].repeat(this.cpf.length) === this.cpf){
+        switch((this.cpf.length !== 11) || (this.cpf[0].repeat(this.cpf.length) === this.cpf)){
             case true: return false; break;
             default: {
                 let validate = this.cpf.slice(0, -2);
