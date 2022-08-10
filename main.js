@@ -1,4 +1,4 @@
-class CPF {
+export class CPF {
     constructor(cpf) {
         this.cpf = cpf.replace(/\D+/g, '');
         this._valido = this.validar();
