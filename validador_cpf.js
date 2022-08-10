@@ -46,9 +46,6 @@ export class CPF {
     }
 
     nineConvert(value){
-        if (value > 9){
-            value = 0;
-        }
-        return value;
+        return value > 9 ? 0 : value;
     }
 }
