@@ -20,7 +20,6 @@ export class CPF {
                 return validate2 === this.cpf;
             }
         }
-
     }
 
     calc (string){
