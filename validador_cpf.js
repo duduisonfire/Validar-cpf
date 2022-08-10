@@ -1,10 +1,10 @@
 export class CPF {
     constructor(cpf) {
         this.cpf = cpf.replace(/\D+/g, '');
-        this._valido = this.validar();
+        this._valid = this.validate();
         }
 
-    validar() {
+    validate() {
         switch((this.cpf.length !== 11) || (this.cpf[0].repeat(this.cpf.length) === this.cpf)){
             case true: return false; break;
             default: {
